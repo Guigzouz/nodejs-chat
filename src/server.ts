@@ -10,6 +10,9 @@ import { postLogin } from "./routes/postLogin";
 import { authentificationMiddleware } from "./middleware/authentificationMiddleware";
 import { getRegister } from "./routes/getRegister";
 import { postRegister } from "./routes/postRegister";
+import { getProfile } from "./routes/getProfile";
+import { postProfile } from "./routes/postProfile";
+import { postDelete } from "./routes/postDelete";
 
 function main() {
   const app = express() as unknown as Application;
@@ -25,6 +28,9 @@ function main() {
   postRegister(app)
 
   app.use(authentificationMiddleware)
+  getProfile(app)
+  postProfile(app)
+  postDelete(app)
   getRoot(app)
   getWs(app, sockets)
 
