@@ -1,6 +1,6 @@
 {
   "name": "daddyguigz-b3-nodejs",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Lorem ipsum dolor sit amet",
   "main": "server.ts",
   "repository": "https://github.com/Guigzouz/nodejs-chat.git",
