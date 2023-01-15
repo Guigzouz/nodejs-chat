@@ -1,7 +1,7 @@
 import { prisma } from "./prisma";
 
-export function findUserByEmail(email: string){
-    return prisma.user.findUnique({
+export async function findUserByEmail(email: string){
+    return await prisma.user.findUnique({
         where: {
             email
         }
@@ -18,7 +18,7 @@ export async function createUser(
             return null
         }
 
-    return prisma.user.create({
+    return await prisma.user.create({
         data: {
             email,
             name
@@ -27,11 +27,11 @@ export async function createUser(
 }
 
 
-export function findUserById(id: string){
+export async function findUserById(id: string){
     if(!id){
         return null
     }
-    return prisma.user.findUnique({
+    return await prisma.user.findUnique({
         where: {
             id
         }
