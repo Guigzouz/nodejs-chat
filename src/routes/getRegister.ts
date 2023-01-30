@@ -4,7 +4,7 @@ import path from "path";
 export function getRegister(app:Application){
     app.get('/register', (req, res) => {
         if (req.signedCookies.ssid){
-          res.redirect('/')
+          res.redirect('/chat')
           return
         }
     

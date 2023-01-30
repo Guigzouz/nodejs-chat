@@ -18,6 +18,6 @@ export function getRoot(app: Application){
             return
         }
 
-        res.sendFile(path.join(__dirname, '../../pages/index.html'))
+        res.sendFile(path.join(__dirname, '../../pages/home.html'))
       })
 }

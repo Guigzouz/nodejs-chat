@@ -13,6 +13,7 @@ import { postRegister } from "./routes/postRegister";
 import { getProfile } from "./routes/getProfile";
 import { postProfile } from "./routes/postProfile";
 import { postDelete } from "./routes/postDelete";
+import { getChat } from "./routes/getChat";
 
 function main() {
   const app = express() as unknown as Application;
@@ -31,7 +32,10 @@ function main() {
   getProfile(app)
   postProfile(app)
   postDelete(app)
+  // postPost (app)
+  // console.log("je suis apres postPost")
   getRoot(app)
+  getChat(app)
   getWs(app, sockets)
 
   app.use((error: Error, req: Request, res: Response, next: NextFunction) => {

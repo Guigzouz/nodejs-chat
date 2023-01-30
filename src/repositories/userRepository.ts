@@ -1,4 +1,22 @@
-import { prisma } from "./prisma";
+import { prisma } from './prisma';
+
+export async function createPost(content: string, userId:string) {
+  return await prisma.post.create({
+    data: {
+      content,
+      userId
+    }
+  })
+}
+
+export function findPosts() {
+    return prisma.post.findMany({
+      orderBy: {
+        createdAt: "desc",
+      },
+    });
+  }
+
 
 export async function findUserByEmail(email: string){
     return await prisma.user.findUnique({
