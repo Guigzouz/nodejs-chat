@@ -1,3 +1,5 @@
+const postsList = document.getElementById('post-list');
+
 let ws;
 function connect() {
   ws = new WebSocket("ws://localhost:3000/ws-posts");
@@ -9,22 +11,27 @@ function connect() {
 }
 
 async function addMessage(content) {
-  const message = document.createElement("li");
+  const message = document.createElement("a");
   message.innerText = content;
   postsList.prepend(message);
 }
 
 connect();
 
-document.querySelector("form").addEventListener("submit", (e) => {
-  e.preventDefault();
-  // await sendFile();
-  const inputText = document.querySelector("#post-area");
-  const myFiles = document.getElementById("my-files").files;
-  addMessage(inputText.value);
-  uploadFile(myFiles, ws);
+console.log("script charge")
 
-  // ws.send(JSON.stringify(myFiles));
-  // ws.send(inputText.value);
-  inputText.value = "";
-});
+function addMessage(content) {
+  const message = document.createElement("a");
+  message.innerText = content;
+  postsList.prepend(message);
+}
+
+document.querySelector('form')
+  .addEventListener('submit', (e) => {
+    e.preventDefault();
+    const input = document
+      .querySelector('#post-input');
+    addMessage(input.value);
+    ws.send(input.value);
+    input.value = '';
+  });

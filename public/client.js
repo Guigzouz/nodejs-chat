@@ -1,8 +1,6 @@
 const messageList = document.getElementById('message-list');
 const chatStatus = document.getElementById('chat-status');
 
-// const postList = document.getElementById('post-list');
-
 function addMessage(message) {
   const messageElement = document
     .createElement('div');
@@ -10,12 +8,7 @@ function addMessage(message) {
   messageList.appendChild(messageElement);
 }
 
-// function addPost(post) {
-//   const postElement = document
-//     .createElement('div');
-//   postElement.textContent = post;
-//   messageList.appendChild(messageElement);
-// }
+// Connexion du WebSocket
 
 let ws
 
@@ -49,16 +42,6 @@ document.querySelector('form')
     e.preventDefault();
     const input = document
       .querySelector('#chat-input');
-    addMessage(input.value);
-    ws.send(input.value);
-    input.value = '';
-  });
-
-document.querySelector('form')
-  .addEventListener('submit', (e) => {
-    e.preventDefault();
-    const input = document
-      .querySelector('#post-input');
     addMessage(input.value);
     ws.send(input.value);
     input.value = '';

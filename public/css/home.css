@@ -1,0 +1,11 @@
+#post-list{
+    display: flex;
+    flex-direction: column;
+}
+
+#post-list a{
+    border: solid;
+    border-radius: 15px;
+    padding: 15px;
+    margin-bottom: 15px;
+}

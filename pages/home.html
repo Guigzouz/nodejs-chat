@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/home.css">
+
     <title>Home</title>
 </head>
 <body>
@@ -22,13 +24,18 @@
         </li>
     </ul>
 
-    <form method="POST" class="posts" id="post-list">
-        <h2>Latest posts</h2>
-        <!-- <textarea placeholder="write your own post"  id="post-input" type="textarea"></textarea> -->
-        <form method="POST">
-            <textarea name="post" id="" cols="30" rows="10"></textarea>
-          </form>
-        <button type="submit">Send</button>
+    <div id="title-div">
+        <h1>Latest posts</h1>
+        <i id="chat-status"></i>
+      </div>
+    <div id="post-list"></div>
+    <form>
+      <textarea name="" id="post-input" cols="30" rows="10"></textarea>
+      <button type="submit">Send</button>
+    </form>
+    
+    <form action="/profile">
+      <input type="submit" value="Go to Profile" />
     </form>
     <script src="post.js"></script>
 </body>
