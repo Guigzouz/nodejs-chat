@@ -1,5 +1,51 @@
+// const root = document.getElementById('root');
+
+// function ChatForm({onSendMessage}){
+//   const type = "submit";
+//   const [value, setValue] = React.useState('');
+//   return(
+//     <React.Fragment>
+//       <form onSubmit={(e)=> {
+//         e.preventDefault();
+//         onSendMessage(value);
+//       }}>
+//       <input 
+//       type="text"
+//       value={value} 
+//       onChange={e => setValue(e.target.value)}
+//       id="chat-input" />
+//       <button type={type} >Send</button>
+//     </form>
+//     <form action="/profile">
+//         <input type={type} value="Go to Profile" />
+//       </form>
+//       </React.Fragment>
+      
+//   )
+// }
+
+// function App(){
+//   return(
+//     <React.Fragment>
+//       <div id="title-div">
+//     <h1>My chat app</h1>
+//     <i id="chat-status"></i>
+//   </div>
+// <div id="message-list"></div>
+//     <ChatForm on/>
+//     </React.Fragment>
+//   )
+// }
+
+// ReactDOM.render(<App/>, root)
+
+
 const messageList = document.getElementById('message-list');
 const chatStatus = document.getElementById('chat-status');
+
+function test(){
+  return <div/>
+}
 
 function addMessage(message) {
   const messageElement = document

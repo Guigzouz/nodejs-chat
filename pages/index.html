@@ -7,6 +7,10 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Chat app</title>
   <link rel="stylesheet" href="css/style.css">
+  <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+  <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+
 </head>
 <body>
   <div id="title-div">
@@ -22,6 +26,11 @@
 <form action="/profile">
   <input type="submit" value="Go to Profile" />
 </form>
-<script src="client.js"></script>
+
+<div id="root">
+
+</div>
+
+<script type="text/babel" src="client.js"></script>
 </body>
 </html>
